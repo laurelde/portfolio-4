@@ -15,6 +15,7 @@ import HDCReport from "./Components/reports/hdcReport";
 const routing = (
   <BrowserRouter>
     <Route exact path="/" component={Landing} />
+    <Route exact path="/portfolio-4" component={Landing} />
     <Route exact path="/projects" component={Projects} />
     <Route path="/projects/classify-app" component={ClassifyReport} />
     <Route path="/projects/hdc-app" component={HDCReport} />

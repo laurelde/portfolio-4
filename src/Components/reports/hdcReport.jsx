@@ -2,6 +2,12 @@ import React, { Component } from "react";
 import ReportOverview from "../reportOverview/reportOverview";
 import Header from "../header/header";
 import Footer from "../footer/footer";
+import deliverables from "../../images/prototyping/deliverables.jpg";
+import persona1 from "../../images/prototyping/persona1.jpg";
+import persona2 from "../../images/prototyping/persona2.jpg";
+import persona3 from "../../images/prototyping/persona3.jpg";
+import wireframing from "../../images/prototyping/wireframing.jpg";
+import workflows from "../../images/prototyping/Workflows-2.jpg";
 
 class HDCReport extends Component {
   state = {
@@ -45,20 +51,11 @@ class HDCReport extends Component {
             focus the design direction towards real users.
           </p>
 
-          <img
-            src="images/prototyping/persona1.jpg"
-            className="left-block"
-          ></img>
+          <img src={persona1} className="left-block"></img>
           <br></br>
-          <img
-            src="images/prototyping/persona2.jpg"
-            className="right-block"
-          ></img>
+          <img src={persona2} className="right-block"></img>
           <br></br>
-          <img
-            src="images/prototyping/persona3.jpg"
-            className="left-block bottom-image"
-          ></img>
+          <img src={persona3} className="left-block bottom-image"></img>
           <br></br>
           <p>
             With our user personas in mind, the next step was to create goals
@@ -95,11 +92,7 @@ class HDCReport extends Component {
             through intuitive models.
           </p>
 
-          <img
-            src="images/prototyping/Workflows-2.jpg"
-            className="center-block"
-            id="workflow-hdc"
-          ></img>
+          <img src={workflows} className="center-block" id="workflow-hdc"></img>
 
           <h2>Sketches:</h2>
           <p>
@@ -112,7 +105,7 @@ class HDCReport extends Component {
           </p>
 
           <img
-            src="images/prototyping/wireframing.jpg"
+            src={wireframing}
             className="center-block"
             id="wireframing-hdc"
           ></img>
@@ -129,7 +122,7 @@ class HDCReport extends Component {
           </p>
 
           <img
-            src="images/prototyping/deliverables.jpg"
+            src={deliverables}
             className="center-block"
             id="wireframing-hdc"
           ></img>

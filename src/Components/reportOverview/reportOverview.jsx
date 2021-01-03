@@ -17,21 +17,21 @@ class ReportOverview extends Component {
         <h1 className="project-name">{name}</h1>
         <div className="specs" style={{ backgroundColor: themeColor }}>
           <div className="row">
-            <div className="col-sm-4 col-xs-12">
+            <div>
               <h2>
                 <i className="fa fa-briefcase mr-1" aria-hidden="true"></i>
                 <strong> Client</strong>
               </h2>
               <h2>{client}</h2>
             </div>
-            <div className="col-sm-4 col-xs-12">
+            <div>
               <h2>
                 <i className="fa fa-users mr-1" aria-hidden="true"></i>
                 <strong> Role</strong>
               </h2>
               <h2>{role}</h2>
             </div>
-            <div className="col-sm-4 col-xs-12">
+            <div>
               <h2>
                 <i className="fa fa-calendar mr-1" aria-hidden="true"></i>
                 <strong> Duration</strong>

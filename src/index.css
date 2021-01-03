@@ -1,11 +1,23 @@
 body {
   font-family: "Raleway", sans-serif;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .header {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   background-color: white;
+  z-index: 15;
 }
 
 .header .navbar {
@@ -31,6 +43,8 @@ body {
 .navbar a {
   color: black;
   border-bottom: 1px solid transparent;
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
   margin: 0 auto;
 }
@@ -63,6 +77,10 @@ footer {
   position: relative;
 }
 
+#resume + footer {
+  position: relative;
+}
+
 h5 {
   font-size: 0.65rem;
   color: grey;
@@ -87,6 +105,8 @@ footer li {
 }
 
 footer .navbar {
+  height: -webkit-min-content;
+  height: -moz-min-content;
   height: min-content;
 }
 
@@ -109,6 +129,55 @@ h1 {
   justify-content: center;
   align-items: center;
   font-weight: 100;
+}
+
+#cover {
+  background-color: white;
+  width: 100vw;
+  height: 28vh;
+  position: absolute;
+  left: 80vw;
+  overflow: auto;
+  z-index: 500;
+}
+
+#cover2 {
+  background-color: white;
+  width: 100vw;
+  height: 200px;
+  position: absolute;
+  left: 100vw;
+  bottom: 0;
+  overflow: auto;
+  margin-bottom: -30px;
+  z-index: 500;
+}
+
+.enterSiteClass {
+  animation: enterSite 2.5s;
+}
+
+.coverTop {
+  animation: coverTop 4s;
+}
+
+@keyframes enterSite {
+  from {
+    box-shadow: 20px 5px 20px 5px #00000038;
+  }
+  to {
+    box-shadow: 100vw 5px 20px 5px #00000038;
+  }
+}
+
+@keyframes coverTop {
+  to {
+    left: 0;
+  }
+}
+
+button:focus {
+  outline: none;
 }
 
 button {
@@ -188,13 +257,13 @@ button {
   max-width: 40vw;
 }
 
-#img1:hover,
+/* #img1:hover,
 #img2:hover,
 #img3:hover,
 #img4:hover,
 #img5:hover {
   z-index: 4;
-}
+} */
 
 h2 .Typewriter__wrapper,
 h2 .Typewriter__cursor {
@@ -211,9 +280,11 @@ h2 .Typewriter__cursor {
   margin: 10px;
 }
 
-.carousel-control-prev:hover,
+.carousel-control-prev:hover {
+  background: linear-gradient(to left, #ffffff80 0%, #969696 100%);
+}
 .carousel-control-next:hover {
-  color: grey;
+  background: linear-gradient(to right, #ffffff80 0%, #969696 100%);
 }
 
 .carousel-control-next,
@@ -226,7 +297,7 @@ h2 .Typewriter__cursor {
 }
 
 .carousel-indicators {
-  bottom: 50px;
+  bottom: 60px;
 }
 
 .carousel-slide {
@@ -282,7 +353,6 @@ li:last-child {
 }
 
 .report-overview {
-  padding: 20px 0;
   margin: 20px 0;
   display: flex;
   flex-direction: column;
@@ -296,17 +366,27 @@ li:last-child {
   font-size: 1em;
 }
 
+.under-construction {
+  text-align: center;
+}
+
 .specs {
   text-align: center;
-  margin: 10px 0;
+  margin: 20px 0;
   padding: 20px 50px 10px;
 }
 
 .specs .row {
-  margin: 0;
+  margin: 10px 0 20px 0;
   color: white;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.specs .row:not(:last-child) > div {
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+  margin: 0 20px;
 }
 
 .specs ul,
@@ -328,8 +408,39 @@ li:last-child {
   font-weight: 300;
 }
 
+.report img {
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+  padding: 20px 10px;
+}
+
+.report .left-block {
+  margin-left: 10%;
+  margin-right: auto;
+}
+
+.report .right-block {
+  margin-right: 10%;
+  margin-left: auto;
+}
+
+.wireframeInt {
+  border: 1px solid black;
+  z-index: 1 !important;
+  border-radius: 7px;
+}
+
+#Prototype482 {
+  width: 100%;
+  height: -webkit-fill-available;
+  margin-bottom: 40px;
+}
+
 p {
   font-weight: 300;
+  line-height: 2;
+  margin: 40px 0;
 }
 
 #resume {
@@ -338,6 +449,7 @@ p {
 }
 
 #resume-download {
+  position: -webkit-sticky;
   position: sticky;
   top: 10vh;
   left: 7vw;
@@ -386,6 +498,10 @@ p {
 
   .project-walkthrough {
     padding: 0 100px;
+  }
+
+  .userflow img {
+    max-width: 30vw;
   }
 }
 
