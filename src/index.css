@@ -138,7 +138,7 @@ h1 {
   position: absolute;
   left: 80vw;
   overflow: auto;
-  z-index: 500;
+  z-index: -1;
 }
 
 #cover2 {
@@ -150,7 +150,7 @@ h1 {
   bottom: 0;
   overflow: auto;
   margin-bottom: -30px;
-  z-index: 500;
+  z-index: -1;
 }
 
 .enterSiteClass {
@@ -173,6 +173,7 @@ h1 {
 @keyframes coverTop {
   to {
     left: 0;
+    z-index: 500;
   }
 }
 

@@ -30,7 +30,6 @@ class Landing extends Component {
     return (
       <div id="landing">
         <div id="banner">
-          <div id="cover"></div>
           <h1>
             <div id="cover"></div>LAUREL DENTINGER
           </h1>
